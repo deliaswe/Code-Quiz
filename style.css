@@ -61,3 +61,30 @@ margin-bottom: 7px;
 /* added color to the background of the answers/ */
 }
 
+#createH1 {
+    font-size: 50px;
+    color: rgb(39, 156, 90);
+    background: -webkit-linear-gradient(rgb(173, 45, 199), rgb(132, 240, 69));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+/* used the resource https://css-tricks.com/snippets/css/gradient-text/ */
+}
+
+#initials{
+    height: 35px;
+    width: 75px;
+    border-radius: 5px;
+    border-width: 1.5px;
+}
+
+button {
+    font-size: 120%;
+    margin-left: 10px;
+    height: 35px;
+    width: 75px;
+    border-radius: 10px;
+}
+
+#createDiv {
+    margin-top: 40px; 
+}
