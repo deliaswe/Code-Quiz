@@ -121,3 +121,28 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 }
 
+// All done function will append last page
+function allDone() {
+    questionsDiv.innerHTML = "";
+    startButton.style.visibility = "hidden";
+
+    // Heading:
+    var createH1 = document.createElement("h1");
+    createH1.setAttribute("id", "createH1");
+    createH1.textContent = "Finish!"
+    questionsDiv.appendChild(createH1);
+
+    // Paragraph
+    var createP = document.createElement("p");
+    createP.setAttribute("id", "createP");
+    questionsDiv.appendChild(createP);
+
+    // WHEN all questions are answered or the timer reaches 0
+    if (secondsLeft >= 0) {
+        var timeRemaining = secondsLeft;
+        var createP2 = document.createElement("p");
+        clearInterval(timeInterval);
+        createP.textContent = "Your final score is: " + timeRemaining;
+        questionsDiv.appendChild(createP2);
+    }
+
