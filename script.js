@@ -67,3 +67,24 @@ startButton.addEventListener("click", function () {
     render(questionIndex);
 })
 
+// and renders questions and choices to page
+function render(questionIndex) {
+    questionsDiv.innerHTML = "";
+    unorderedList.innerHTML = "";
+    // THEN I am presented with another question
+    for (var i = 0; i < questions.length; i++) {
+        var userQuestion = questions[questionIndex].title;
+        var userChoices = questions[questionIndex].choices;
+        questionsDiv.textContent = userQuestion;
+    }
+    // New choices for each question
+    userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questionsDiv.appendChild(unorderedList);
+        unorderedList.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+    startButton.style.visibility = "hidden";
+}
+
