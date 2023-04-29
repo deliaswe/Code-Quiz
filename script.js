@@ -121,7 +121,7 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 }
 
-// All done function will append last page
+// All done function will appear last page
 function allDone() {
     questionsDiv.innerHTML = "";
     startButton.style.visibility = "hidden";
@@ -145,4 +145,26 @@ function allDone() {
         createP.textContent = "Your final score is: " + timeRemaining;
         questionsDiv.appendChild(createP2);
     }
+
+    // THEN I can save my initials and score
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter your initials: ";
+
+    questionsDiv.appendChild(createLabel);
+
+    // input
+    var createInput = document.createElement("input");
+    createInput.setAttribute("type", "text");
+    createInput.setAttribute("id", "initials");
+    createInput.textContent = "";
+
+    questionsDiv.appendChild(createInput);
+
+    // submit
+    var createSubmit = document.createElement("button");
+    createSubmit.setAttribute("type", "submit");
+    createSubmit.setAttribute("id", "Submit");
+    createSubmit.textContent = "Submit";
+    questionsDiv.appendChild(createSubmit);
 
