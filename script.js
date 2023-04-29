@@ -47,3 +47,23 @@ var questions = [
     }
 ]
 
+//GIVEN I am taking a code quiz, WHEN I click the start button
+
+startButton.addEventListener("click", function () {
+
+    // a timer starts
+    if (timeInterval === 0) {
+        timeInterval = setInterval(function () {
+            secondsLeft--;
+            timer.textContent = "Time: " + secondsLeft + " seconds";
+
+            if (secondsLeft <= 0) {
+                clearInterval(timeInterval);
+                finished();
+                timer.textContent = "Time's up!";
+            }
+        }, 1000);
+    }
+    render(questionIndex);
+})
+
